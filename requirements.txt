@@ -1,0 +1,7 @@
+asgiref==3.7.2
+Django==4.2.7
+sqlparse==0.4.4
+tzdata==2023.3
+
+django-environ==0.11.2  # https://github.com/joke2k/django-environ
+psycopg2-binary

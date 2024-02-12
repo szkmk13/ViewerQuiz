@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="overflow: auto">
+        <table>
+            <tr>
+                <th>Questions/Viewers</th>
+                {% for viewer in viewers %}
+                    <th>{{ viewer.name }} {{ viewer.total_points|floatformat:2 }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for element in sorted %}
+                <tr>
+                    <th>{{ element.question }}</th>
+                    {% for answer in element.points %}
+                        <th>{{ answer }}</th>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

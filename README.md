@@ -1,1 +1,1 @@
-"# matematyka-dyskretna" 
+Simple django-templates app,  to store data from quiz's on instagram stories.

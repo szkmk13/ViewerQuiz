@@ -1,0 +1,8 @@
+/.env
+/db.sqlite3
+/.venv/
+__pycache__/
+.ipython/
+.idea/
+/staticfiles/
+/quiz.sql

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px;
+            border-radius: 20px;
+
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+        }
+
+        th {
+            background-color: #B3ACC1;
+        }
+
+        .header-nav {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .header-tab {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: #61AAA5;
+            width: 100%;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            text-decoration-color: #0B1413;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<div class="header-nav">
+    <div class="header-tab"><a class="nav-link" href={{ base_url }}>All-TIME</a></div>
+    {% for travel in travels %}
+        <div class="header-tab">
+            <a class="nav-link" href={{ base_url }}{{ travel.description }}>
+                {{ travel.description }}
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>
